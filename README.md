@@ -21,8 +21,8 @@ Ensure you have the following installed:
 Clone the repository and install the dependencies:
 
 ```bash
-git tdb
-cd testcafe-test-suite
+git clone https://github.com/jeffarat/NinjaOne.git
+cd NinjaOne
 npm install
 ```
 
