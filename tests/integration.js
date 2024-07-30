@@ -14,11 +14,12 @@ test('Integration - Test 1 - Check the api device list elements are present on t
             .expect(200);
     
     for (const devices of allDevices.body) {
-        await t.expect(devicesPage.deviceName.withText(devices.system_name).visible).ok(`The device ${devices.system_name} is not present on the page`)
-         .expect(devicesPage.deviceType.withText(devices.type).visible).ok(`The device type ${devices.type} is not present on the page`)
-         .expect(devicesPage.deviceCapacity.withText(devices.hdd_capacity).visible).ok(`The device capacity ${devices.hdd_capacity} is not present on the page`)
-         .expect(devicesPage.getDynamicEditButton(devices.id).innerText, ).contains('EDIT',`The edit button id #${devices.id} is not present on the page`)
-         .expect(devicesPage.getDynamicEditButton(devices.id).nextSibling(0).innerText).contains('REMOVE', `The remove button id #${devices.id} is not present on the page`)
+        await t
+         .expect(devicesPage.deviceName.withText(devices.system_name).visible).ok(`The device ${devices.system_name} is not present on the page`)
+         .expect(devicesPage.getDeviceInfoById(devices.id).withText(devices.type).visible).ok(devices.type, `The device type ${devices.type} is not present on the page`)
+         .expect(devicesPage.getDeviceInfoById(devices.id).withText(devices.hdd_capacity).visible).ok(devices.hdd_capacity, `The device type ${devices.type} is not present on the page`)
+         .expect(devicesPage.getDynamicEditButton(devices.id).withText('EDIT').visible).ok(`The edit button id #${devices.id} is not present on the page`)
+         .expect(devicesPage.getDynamicEditButton(devices.id).nextSibling().withText('REMOVE').visible).ok(`The remove button id #${devices.id} is not present on the page`)
     }   
 });
 

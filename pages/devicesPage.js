@@ -4,7 +4,7 @@ class DevicesPage {
     
     constructor () {
         this.mainBox               = Selector('.device-main-box')
-        this.deviceInfo            = Selector('.device-info')
+        this.deviceInfo            = '.device-info'
         this.deviceName            = Selector('.device-name')
         this.deviceType            = Selector('span.device-type')
         this.deviceCapacity        = Selector('span.device-capacity')
@@ -15,6 +15,9 @@ class DevicesPage {
     }
     getDynamicEditButton(id) {
       return Selector(`a[href$='${id}']`);
+    }
+    getDeviceInfoById(id) {
+      return Selector(`a[href$='${id}']`).parent().prevSibling(this.deviceInfo);
     }
 }
 
