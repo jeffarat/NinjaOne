@@ -1,0 +1,15 @@
+[
+    {
+        "systemName": "WINDOWS WORKSTATION",
+        "selectValue":"WINDOWS_WORKSTATION"
+    },
+    {
+        "systemName": "WINDOWS SERVER",
+        "selectValue":"WINDOWS_SERVER"
+        
+    },
+    {
+        "systemName": "MAC",
+        "selectValue": "MAC"
+    }
+]

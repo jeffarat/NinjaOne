@@ -1,0 +1,20 @@
+{
+  "name": "Testcafe Solution",
+  "version": "1.0",
+  "description": "NinjaOne - Automation Tech Showcase",
+  "main": "tests/regression.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "testcafe chrome tests/**/*js",
+    "integration": "testcafe chrome tests/integration.js",
+    "regression": "testcafe chrome tests/regression.js"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "supertest": "^7.0.0",
+    "testcafe": "*"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
