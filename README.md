@@ -7,10 +7,7 @@ This repository contains a solution to the NinjaOne - Automation Tech Showcase
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running Tests](#running-tests)
-- [Configuration](#configuration)
-- [Writing Tests](#writing-tests)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Prerequisites
 
